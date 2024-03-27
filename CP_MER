@@ -1,0 +1,43 @@
+Entités principales :
+Gymnase :
+
+Identifiant unique (ID_gymnase) (clé primaire)
+Nom
+Adresse
+Numéro de téléphone
+Membre :
+
+Identifiant unique (ID_membre) (clé primaire)
+Nom
+Prénom
+Adresse
+Date de naissance
+Sexe
+Session :
+
+Identifiant unique (ID_session) (clé primaire)
+Type de sport
+Horaire
+Capacité maximale (max_membres)
+Entraîneur :
+
+Identifiant unique (ID_entraineur) (clé primaire)
+Nom
+Prénom
+Âge
+Spécialité
+Relations :
+Inscription :
+
+ID_membre (clé étrangère référençant Membre)
+ID_session (clé étrangère référençant Session)
+Diriger :
+
+ID_session (clé étrangère référençant Session)
+ID_entraineur (clé étrangère référençant Entraîneur)
+Contraintes de clé étrangère :
+Dans la relation Inscription, ID_membre référence l'entité Membre.
+Dans la relation Inscription, ID_session référence l'entité Session.
+Dans la relation Diriger, ID_session référence l'entité Session.
+Dans la relation Diriger, ID_entraineur référence l'entité Entraîneur.
+Ce modèle permet de gérer les relations entre les membres, les gymnases, les sessions et les entraîneurs, en tenant compte des contraintes de clé étrangère pour assurer l'intégrité des données.
